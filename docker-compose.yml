@@ -1,0 +1,16 @@
+# Use postgres/example user/password credentials
+version: '3.7'
+
+services:
+
+  db:
+    image: postbanco
+    restart: always
+    environment:
+      POSTGRES_PASSWORD:  postgres
+
+  adminer:
+    image: postbanco
+    restart: always
+    ports:
+      - 5432:5432

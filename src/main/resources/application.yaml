@@ -1,0 +1,27 @@
+db:
+  host: localhost
+  port: 5432
+  name: postgres
+  user: postgres
+  pass: 1
+
+spring:
+  application:
+    name:AppFuncionarios
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    driverClassName: org.postgresql.Driver
+    initialization-mode: always
+    username: postgres
+    password: 1
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate.ddl-auto: update
+
+  flyway:
+    enable: true
+    out-of-order: true
+    baselineOnMigrate: true
+    validateOnMigrate: false
+
